@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/main.css">
+  <!-- JS -->
+  <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="./js/script.js"></script>
 </head>
 <body>
   <div class="wrap">
@@ -22,10 +25,24 @@
           </a>
         </h1>
         <h2 class="main-header__intro-text">welcome</h2>
-        <button class="main-header__btn-menu--open">
+        <button class="main-header__btn-menu-open">
           MENU <span class="lnr lnr-menu"></span>
         </button>
       </div>
+      <!-- Global Nav -->
+      <nav class="gnb">
+        <button class="gnb__btn-menu-close">
+          <span class="lnr lnr-cross"></span>
+        </button>
+        <div class="gnb__menu">
+          <a href="#" class="gnb__menu-link">Home</a>
+          <a href="#" class="gnb__menu-link">About</a>
+          <a href="#" class="gnb__menu-link">Work</a>
+          <a href="#" class="gnb__menu-link">Contact</a>
+          <a href="#" class="gnb__menu-link">News</a>
+          <a href="#" class="gnb__menu-link">Favorite</a>
+        </div>
+      </nav>
     </header>
     <!-- Visual -->
     <section class="visual">
@@ -158,6 +175,7 @@
         </div>
       </div>
     </section>
+    <!-- Footer -->
     <footer class="footer">
       <div class="footer__box footer__company-info">
         와이스튜디오<br>

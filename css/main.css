@@ -8,6 +8,7 @@ body {
 }
 
 .wrap {
+  position: relative;
   width: 100%;
   margin: 0 auto;
 }
@@ -67,14 +68,14 @@ body {
   text-transform: uppercase;
 }
 
-.main-header__btn-menu--open {
+.main-header__btn-menu-open {
   margin-left: auto;
   color: #fff;
   font-size: 16px;
   font-weight: bold;
 }
 
-.main-header__btn-menu--open span {
+.main-header__btn-menu-open span {
   display: inline-block;
   margin-top: -5px;
   margin-left: 15px;
@@ -82,11 +83,49 @@ body {
   vertical-align: middle;
 }
 
-/* Visual */
-.visual {
-
+/* Header - global nav */
+.gnb {
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  right: -600px;
+  width: 100%;
+  max-width: 480px;
+  height: 100vh;
+  padding: 70px;
+  z-index: 200;
+  transition: 0.5s;
 }
 
+.gnb.on {
+  right: 0;
+}
+
+.gnb__btn-menu-close {
+  color: #fff;
+  font-size: 40px;
+  float: right;
+}
+
+.gnb__menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.gnb__menu-link {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.7;
+  transition: 0.3s;
+  color: #666;
+}
+
+.gnb__menu-link:first-child,
+.gnb__menu-link:hover {
+  color: #fff;
+}
+
+/* Visual */
 .slide__item {
   background-color: #222;
   position: relative;
