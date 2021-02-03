@@ -267,3 +267,48 @@ body {
   font-size: 20px;
   text-transform: uppercase;
 }
+
+/* Contents - partner */
+.contents__partner {
+  width: 1170px;
+  margin: 120px auto;
+  color: #fff;
+}
+
+.partner__title {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.partner__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.partner__list-item {
+  width: 25%;
+  height: 100px;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.partner__list-item:nth-of-type(1),
+.partner__list-item:nth-of-type(5) {
+  width: 20%;
+  text-align: left;
+}
+
+.partner__list-item:nth-of-type(4n) {
+  width: 20%;
+  text-align: right;
+}
+
+.partner__img {
+  opacity: 0.4;
+  transition: 0.5s;
+}
+
+.partner__list-item:hover .partner__img {
+  opacity: 1;
+}
