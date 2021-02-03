@@ -132,3 +132,62 @@ body {
   font-weight: bold;
   transform: rotate(-90deg);
 }
+
+/* Contents */
+.contents {
+  background-color: #1b1b1b;
+  padding: 120px 0;
+  overflow: hidden;
+}
+
+/* Contents - introduce */
+.introduce {
+  display: flex;
+}
+
+.contents__introduce {
+  position: relative;
+  width: 1170px;
+  padding-bottom: 60px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.contents__introduce::before {
+  content: "";
+  position: absolute;
+  left: 50px;
+  top: 130px;
+  background-color: #ffec03;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.contents__introduce::after {
+  content: '”';
+  position: absolute;
+  top: 50px;
+  left: 0;
+  font-size: 300px;
+}
+
+.introduce__title {
+  width: 30%;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.introduce__desc {
+  width: 70%;
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+.introduce__company {
+  display: block;
+  margin-top: 60px;
+  color: #999;
+  font-size: 18px;
+}
