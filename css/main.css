@@ -338,3 +338,37 @@ body {
   margin: 40px 0;
   font-size: 55px;
 }
+
+/* Footer */
+.footer {
+  background-color: #1b1b1b;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 80px 80px;
+  color: #999;
+  line-height: 1.8;
+}
+
+.footer__box {
+  width: 33.3333%;
+}
+
+.footer__company-contact {
+  color: #eee;
+  font-size: 16px;
+}
+
+.footer__company-contact span {
+  font-weight: bold;
+  margin-right: 5px;
+  color: #999;
+}
+
+.footer__btn-top {
+  position: absolute;
+  right: 80px;
+  bottom: 60px;
+  font-size: 48px;
+  color: #fff;
+}
