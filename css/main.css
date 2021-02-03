@@ -312,3 +312,29 @@ body {
 .partner__list-item:hover .partner__img {
   opacity: 1;
 }
+
+/* Contents - contact */
+.contents__contact {
+  background: url(../image/contact.jpg) no-repeat left/90%;
+  background-attachment: fixed;
+  position: relative;
+  width: 100%;
+  padding: 180px 0;
+  color: #fff;
+}
+
+.contact__inner {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.contact__text {
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.contact__tel {
+  display: block;
+  margin: 40px 0;
+  font-size: 55px;
+}
