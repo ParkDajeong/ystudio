@@ -184,10 +184,6 @@ body {
   font-size: 63px;
 }
 
-.slide__link {
-  
-}
-
 .slide__link span {
   font-size: 14px;
   margin-left: 5px;
@@ -200,6 +196,7 @@ body {
   color: #ccc;
   font-weight: bold;
   transform: rotate(-90deg);
+  animation: scroll 0.8s;
 }
 
 /* Contents */
@@ -440,4 +437,16 @@ body {
   bottom: 60px;
   font-size: 48px;
   color: #fff;
+}
+
+/* Animation */
+@keyframes scroll {
+  0% {
+    opacity: 0;
+    left: -150px;
+  }
+  100% {
+    opacity: 1;
+    left: 50px;
+  }
 }

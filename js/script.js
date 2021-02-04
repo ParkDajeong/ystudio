@@ -20,3 +20,17 @@ $(function() {
     $(".gnb").toggleClass("on");
   });
 });
+
+// Scroll Animation
+$(function() {
+  $(".animate").scrolla({
+    mobile: false,
+    once: false,
+  });
+});
+
+$(function() {
+  $(".footer__btn-top").on("click", function(e) {
+    $("html, body").animate({scrollTop: 0}, 600);
+  });
+});

@@ -6,11 +6,15 @@
   <title>와이스튜디오</title>
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/main.css">
   <!-- JS -->
   <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
-  <script src="./js/script.js"></script>
+  <script src="./js/jquery.scrolla.min.js" defer></script>
+  <script src="./js/script.js" defer></script>
 </head>
 <body>
   <div class="wrap">
@@ -68,7 +72,7 @@
     <!-- Contents -->
     <section class="contents">
       <!-- Contents - introduce -->
-      <div class="introduce contents__introduce">
+      <div class="introduce contents__introduce animate" data-animate="fadeInUp" data-duration="1s">
         <h3 class="introduce__title">
           Great experience<br>
           build great brands.
@@ -84,7 +88,7 @@
       <!-- Contents - projects -->
       <div class="projects contents__projects">
         <div class="projects__top">
-          <h3 class="projects__title">
+          <h3 class="projects__title animate" data-animate="fadeInLeft" data-duration="1s">
             Meet<br>
             Out Projects
           </h3>
@@ -93,7 +97,7 @@
             <span class="lnr lnr-chevron-right"></span>
           </a>
         </div>
-        <ul class="projects__list">
+        <ul class="projects__list animate" data-animate="fadeInRight" data-duration="1.5s">
           <li class="projects__list-item">
             <a href="#" class="projects__link-work">
               <img src="./image/project1.jpg" class="projects__img" alt="">
@@ -135,7 +139,7 @@
       <!-- Contents - partner -->
       <div class="partner contents__partner">
         <h3 class="partner__title">우리의 소중한 고객입니다.</h3>
-        <ul class="partner__list">
+        <ul class="partner__list animate" data-animate="fadeInUp" data-duration="1s">
           <li class="partner__list-item">
             <img src="./image/partner1.png" class="partner__img" alt="아모레퍼시픽">
           </li>
@@ -163,7 +167,7 @@
         </ul>
       </div>
       <!-- Contents - contact -->
-      <div class="contact contents__contact">
+      <div class="contact contents__contact animate" data-animate="fadeIn" data-duration="2s">
         <div class="contact__inner">
           <p class="contact__text">당신의 프로젝트를 이야기해 주세요.</p>
           <strong class="contact__tel">010.1234.1234</strong>
@@ -191,9 +195,9 @@
         © YSUDIO2020<br>
         All Rights Reseved
       </div>
-      <a href="#" class="footer__btn-top">
+      <button class="footer__btn-top">
         <span class="lnr lnr-arrow-up"></span>
-      </a>
+      </button>
     </footer>
   </div>
 </body>
