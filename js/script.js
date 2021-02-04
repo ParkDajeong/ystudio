@@ -21,6 +21,19 @@ $(function() {
   });
 });
 
+// Slide
+$(function() {
+  $(".visual .slide").slick({
+    arrows: true,
+    dots: false,
+    fade: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    pauseOnHover: false,
+    pauseOnFocus: false,
+  });
+});
+
 // Scroll Animation
 $(function() {
   $(".animate").scrolla({
@@ -29,6 +42,7 @@ $(function() {
   });
 });
 
+// Top Button
 $(function() {
   $(".footer__btn-top").on("click", function(e) {
     $("html, body").animate({scrollTop: 0}, 600);
