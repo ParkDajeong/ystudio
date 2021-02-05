@@ -576,3 +576,79 @@ body {
     right: 0;
   }
 }
+
+/* 반응형 */
+@media screen and (max-width: 1200px) {
+  br.pc {
+    display: none;
+  }
+
+  .contents__introduce, 
+  .projects__top, 
+  .contents__partner, 
+  .contact__inner {
+    width: 92%;
+  }
+
+  /* Contents - projects */
+  .projects__link-work:hover img {
+    transform: scale(1);
+  }
+
+  .projects__info {
+    position: relative;
+    width: 100%;
+    padding-bottom: 30px;
+  }
+
+  .projects__name::after {
+    content: "⟶";
+    position: absolute;
+    right: 16px;
+    bottom: 0;
+    font-size: 18px;
+  }
+
+  /* Contents - contact */
+  .contents__contact {
+    width: 90%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+  }
+
+  /* Footer */
+  .footer__btn-top {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  /* Visual */
+  .slide__img {
+    right: -30%;
+    width: auto;
+    height: 100%;
+  }
+
+  .slick-active .slide__img {
+    animation-duration: 1s;
+  }
+
+  .slide__title {
+    font-size: 50px;
+  }
+
+  @keyframes image-right {
+    0% {
+      opacity: 0;
+      right: -50px;
+      transform: scale(0.99);
+    }
+    100% {
+      opacity: 1;
+      right: -30%;
+    }
+  }
+}
