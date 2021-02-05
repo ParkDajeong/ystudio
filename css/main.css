@@ -36,8 +36,9 @@ body {
 .logo__img {
   position: absolute;
   width: 100%;
-  top: 0;
+  top: 50%;
   left: 0;
+  transform: translateY(-50%);
 }
 
 /* Header */
@@ -125,7 +126,7 @@ body {
   height: 100vh;
   padding: 70px;
   z-index: 200;
-  transition: 0.5s;
+  transition: 0.7s;
 }
 
 .gnb.on {
@@ -222,7 +223,10 @@ body {
   color: #ccc;
   font-weight: bold;
   transform: rotate(-90deg);
-  animation: scroll 0.8s;
+}
+
+.slick-active .slide__scroll {
+  animation: scroll-left 0.8s;
 }
 
 /* Slide arrows */
@@ -269,7 +273,7 @@ body {
 }
 
 .slick-prev::after {
-  content: "‹";
+  content: "<";
 }
 
 .slick-next {
@@ -277,7 +281,7 @@ body {
 }
 
 .slick-next::after {
-  content: "›";
+  content: ">";
 }
 
 /* Contents */
@@ -522,7 +526,7 @@ body {
 }
 
 /* Animation */
-@keyframes scroll {
+@keyframes scroll-left {
   0%, 20% {
     opacity: 0;
     left: -100px;
@@ -580,6 +584,7 @@ body {
 }
 
 /* 반응형 */
+/* 1200px 이하 */
 @media screen and (max-width: 1200px) {
   br.pc {
     display: none;
@@ -626,6 +631,7 @@ body {
   }
 }
 
+/* 1024px 이하 */
 @media screen and (max-width: 1024px) {
   /* Visual */
   .slide__img {
@@ -655,6 +661,7 @@ body {
   }
 }
 
+/* 768px 이하 */
 @media screen and (max-width: 768px) {
   /* Header */
   .main-header {
@@ -739,6 +746,229 @@ body {
     100% {
       opacity: 1;
       right: -68%;
+    }
+  }
+}
+
+/* 650px 이하 */
+@media screen and (max-width: 650px) {
+  body {
+    font-size: 14px;
+  }
+
+  /* Header */
+  .main-header__inner {
+    height: 55px;
+    padding: 0 15px;
+  }
+
+  .main-header .logo {
+    width: 120px;
+    margin-right: 20px;
+  }
+
+  .main-header__intro-text {
+    transition: 0.3s;
+  }
+
+  .main-header.on .main-header__intro-text {
+    opacity: 0;
+  }
+
+  .main-header__btn-menu-open {
+    color: transparent;
+  }
+
+  .main-header__btn-menu-open span {
+    color: #fff;
+    font-size: 28px;
+  }
+
+  /* Header - global nav */
+  .gnb {
+    width: 60%;
+    padding: 50px;
+  }
+
+  .gnb__btn-menu-close,
+  .gnb__menu-link {
+    font-size: 30px;
+  }
+
+  /* Visual */
+  .slide__img {
+    right: -80%;
+  }
+  
+  .slide__text-box {
+    font-size: 16px;
+  }
+
+  .slide__title {
+    margin: 24px 0;
+    font-size: 30px;
+  }
+
+  .slide__scroll {
+    left: 15px;
+    font-size: 13px;
+  }
+
+  /* Slide arrows */
+  .slick-arrow {
+    width: 50px;
+    height: 50px;
+  }
+
+  .slick-arrow::after {
+    font-size: 12px;
+  }
+
+  .slick-prev {
+    bottom: 50px;
+  }
+
+  /* Contents */
+  .contents {
+    padding: 80px 0;
+  }
+
+  /* Contents - introduce */
+  .contents__introduce {
+    flex-direction: column;
+  }
+
+  .contents__introduce::before {
+    top: 80px;
+    left: 45px;
+  }
+
+  .contents__introduce::after {
+    top: 50px;
+    font-size: 200px;
+  }
+
+  .introduce__title {
+    width: 100%;
+    font-size: 26px;
+  }
+
+  .introduce__desc {
+    width: 100%;
+    margin-top: 150px;
+    font-size: 20px;
+  }
+  
+  .introduce__company {
+    font-size: 18px;
+  }
+
+  /* Contents - projects */
+  .projects__top {
+    margin: 40px auto 20px;
+  }
+
+  .projects__title {
+    font-size: 30px;
+  }
+
+  .projects__link-more {
+    margin-top: 45px;
+    font-size: 16px;
+  }
+
+  .projects__list {
+    width: 92%;
+  }
+
+  .projects__list-item {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 35px;
+  }
+
+  .projects__info {
+    text-align: left;
+    padding-bottom: 0;
+  }
+
+  /* Contents - partner */
+  .contents__partner {
+    margin: 80px auto;
+  }
+
+  .partner__list {
+    flex-wrap: wrap;
+  }
+
+  .partner__list-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 70px;
+    margin-top: 20px;
+  }
+  
+  .partner__list-item:nth-of-type(1),
+  .partner__list-item:nth-of-type(5),
+  .partner__list-item:nth-of-type(4n) {
+    width: 50%;
+  }
+
+  .partner__list-item:nth-of-type(4) .partner__img {
+    width: auto;
+    height: 100%;
+  }
+
+  /* Contents - contact */
+  .contact__text {
+    font-size: 15px;
+  }
+
+  .contact__tel {
+    margin: 30px 0;
+    font-size: 35px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 0 30px 30px;
+  }
+
+  .footer__box {
+    width: 100%;
+    height: 100px;
+  }
+
+  .footer__company-contact {
+    font-size: 14px;
+  }
+
+  .footer__btn-top {
+    font-size: 32px;
+  }
+
+  @keyframes scroll-left {
+    0%, 20% {
+      opacity: 0;
+      left: -50px;
+    }
+    100% {
+      opacity: 1;
+      left: 15px;
+    }
+  }
+
+  @keyframes image-right {
+    0% {
+      opacity: 0;
+      right: -100%;
+      transform: scale(0.99);
+    }
+    100% {
+      opacity: 1;
+      right: -80%;
     }
   }
 }
