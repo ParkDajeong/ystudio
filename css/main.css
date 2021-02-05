@@ -46,6 +46,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  padding-top: 30px;
   z-index: 100;
   transition: 0.8s;
 }
@@ -329,6 +330,7 @@ body {
   width: 70%;
   font-size: 24px;
   line-height: 1.4;
+  word-break: keep-all;
 }
 
 .introduce__company {
@@ -643,12 +645,100 @@ body {
   @keyframes image-right {
     0% {
       opacity: 0;
-      right: -50px;
+      right: -40%;
       transform: scale(0.99);
     }
     100% {
       opacity: 1;
       right: -30%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Header */
+  .main-header {
+    padding-top: 10px;
+  }
+  
+  .main-header.on {
+    padding: 5px 0;
+  }
+
+  .main-header__inner {
+    height: 70px;
+    padding: 0 30px;
+  }
+
+  .main-header .logo {
+    width: 150px;
+    margin-right: 150px;
+  }
+  
+  /* Header - global nav */
+  .gnb__menu-link {
+    font-size: 38px;
+  }
+
+  /* Visual */
+  .slide__img {
+    right: -68%;
+  }
+
+  .slide__title {
+    font-size: 35px;
+  }
+
+  /* Contents - introduce */
+  .contents__introduce::before {
+    top: 150px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .contents__introduce::after {
+    top: 90px;
+    font-size: 270px;
+  }
+
+  .introduce__title {
+    margin-right: 10px;
+  }
+
+  /* Contents - projects */
+  .projects__list {
+    flex-wrap: wrap;
+    width: 95%;
+  }
+
+  .projects__list-item {
+    width: 49%;
+    margin-right: 2%;
+  }
+
+  .projects__list-item:nth-of-type(2n) {
+    margin-right: 0;
+  }
+
+  /* Footer */
+  footer {
+    flex-wrap: wrap;
+  }
+
+  .footer__box {
+    width: 50%;
+    height: 110px;
+  }
+
+  @keyframes image-right {
+    0% {
+      opacity: 0;
+      right: -80%;
+      transform: scale(0.99);
+    }
+    100% {
+      opacity: 1;
+      right: -68%;
     }
   }
 }
